@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overlay Menu</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Teko:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<style>
+    * {
+box-sizing: border-box ; 
+padding: 0 ;
+margin: 0 ;  
+     }
+.c-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #1B1E25;
+        font-family: 'Poppins', sans-serif;    
+     }
+.card-details-box{
+   display: flex;
+   width: 480px;
+   min-height: 90vh;
+   background-image: url(bg-image.png);
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   border-radius: 15px;
+   padding-left: 10px;
+   padding-right: 10px;
+   margin: 20px auto;
+   position: relative;
+}
+.c-container .c-menu{
+    width: 100%;
+    margin-top: 20px;;
+}
+.c-container .c-menu ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;   
+}
+.c-container .c-menu ul li{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #000;
+    padding: 3px 5px;
+    border-radius: 5px;
+    transition: all .4s ease-in-out;
+    opacity: 1;  
+}
+.c-container .c-menu ul li:hover{
+    background-color: #f51cdd;
+    cursor: pointer;
+}
+.card-details-content .menu-close-icon{
+   text-align: right;
+}
+.card-details-content .menu-close-icon img{
+    width: 20px;
+ }
+ .card-details-content .menu-close-icon:hover{
+    -webkit-filter: brightness(0) saturate(100) invert(23%) sepia(93%) saturate(5853%) hue-rotate(
+        286deg) brightness(98%) contrast(93%);
+    filter: brightness(0) saturate(100) invert(23%) sepia(93%) saturate(5853%) hue-rotate(
+        288deg) brightness(98%) contrast(93%);
+    cursor: pointer;
+ }
+ .overlay-menu-active .card-details-content{
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+ }
+ .overlay-menu-active .c-menu ul li{
+    opacity: 0;
+ }
+.card-details-content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: rgba(0,0,0,.8);
+    color: #fff;
+    border-radius: 15px;
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    z-index: 11;
+    overflow: hidden;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    transition: all .4s ease-in-out;
+    opacity: 1;
+    padding: 20px 20px;
+    font-family: 'Poppins', sans-serif;
+}
+.card-details-content > h2{
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+    font-family: 'Teko', sans-serif;
+    margin-top: 20px;
+}
+.card-details-content > p{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    font-family: 'Teko', sans-serif;    
+}
+.card-details-content .card-details-text{
+    display: flex;
+    margin-bottom: 20px;
+}
+.card-details-content .card-details-text > h3{
+    font-size: 17px;
+    font-weight: 600;
+    width:35%;
+    text-align: center;
+}
+.card-details-content .card-details-text > p{
+    font-size: 17px;
+    font-weight: 400;
+    color: #ccc;
+    width: 65%;
+    text-align: left;
+    padding-left: 20px;    
+}
+</style>
+    <div class="c-container ">
+        <div class="card-details-box">
+                <nav class="c-menu">
+                    <ul>
+                        <li class="card-menu-item-1"> FOUNDER</li>
+                        <li class="card-menu-item-2"> D 1,211</li>
+                        <li class="card-menu-item-3"> 2 </li>
+                    </ul>
+                </nav>
+
+                <div class="card-details-content">
+
+                    <div class="menu-close-icon"><img src="close_button.svg" alt=""></div>
+                    <h2>FOUNDER</h2>
+                    <p>5651</p>
+                    
+        
+                    <div class="card-details-text">
+                        <h3>Title:</h3>
+                        <p>Accidental Collaboration</p>
+                    </div>
+                    <div class="card-details-text">
+                        <h3>Artist:</h3>
+                        <p>various</p>
+                    </div>
+                    <div class="card-details-text">
+                        <h3>Layer artists:</h3>
+                        <p>common<br> Dirty Robot <br>  Mihaly Szemeti <br> Zsolt Kosa</p>
+                    </div>
+
+                </div>            
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <script>
+        $(".card-menu-item-1").click(function(){
+            $(".c-container").addClass("overlay-menu-active");
+                                    });
+        $(".menu-close-icon").click(function(){
+            $(".c-container").removeClass("overlay-menu-active");
+                                    });
+        
+    </script>
+
+</body>
+</html>
