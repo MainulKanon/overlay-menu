@@ -21,65 +21,58 @@ margin: 0 ;
         display: flex;
         align-items: center;
         justify-content: center;
+        max-width: 600px;
         height: 100vh;
-        background-color: #1B1E25;
-        font-family: 'Poppins', sans-serif;    
+        font-family: 'Poppins', sans-serif; 
+        margin: auto;   
      }
 .nft-details-box{
    display: flex;
-   width: 480px;
-   min-height: 90vh;
+   width: 100%;
+   min-height: 100vh;
    background-image: url(bg-image.png);
    background-position: center center;
    background-repeat: no-repeat;
    background-size: cover;
-   border-radius: 15px;
-   padding-left: 10px;
-   padding-right: 10px;
-   margin: auto 20px ;
    position: relative;
+   padding: 20px;
 }
 .nft-container .nft-menu{
     width: 100%;
-    margin-top: 20px;;
 }
 .nft-container .nft-menu ul{
     list-style: none;
     display: flex;
-    justify-content: space-between;   
+    flex-direction: column;
+    align-items: flex-end;
+     
 }
 .nft-container .nft-menu ul li{
     font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 28px;
     color: #fff;
     background-color: #000;
-    padding: 3px 5px;
+    padding: 0px 5px;
+    margin-bottom: 6px; 
     border-radius: 5px;
     transition: all .4s ease-in-out;
     opacity: 1;  
 }
 .nft-container .nft-menu ul li:hover{
-    background-color: #f51cdd;
+    background-color: #777777;
     cursor: pointer;
 }
 .nft-details-content-1 .menu-close-icon,
 .nft-details-content-2 .menu-close-icon,
 .nft-details-content-3 .menu-close-icon{
    text-align: right;
+   color: #fff;
+   font-size: 20px;
 }
-.nft-details-content-1 .menu-close-icon img,
-.nft-details-content-2 .menu-close-icon img,
-.nft-details-content-3 .menu-close-icon img{
-    width: 20px;
- }
  .nft-details-content-1 .menu-close-icon:hover,
  .nft-details-content-2 .menu-close-icon:hover,
  .nft-details-content-3 .menu-close-icon:hover{
-    -webkit-filter: brightness(0) saturate(100) invert(23%) sepia(93%) saturate(5853%) hue-rotate(
-        286deg) brightness(98%) contrast(93%);
-    filter: brightness(0) saturate(100) invert(23%) sepia(93%) saturate(5853%) hue-rotate(
-        288deg) brightness(98%) contrast(93%);
+    color:  #777777;
     cursor: pointer;
  }
  .overlay-menu-active-1 .nft-details-content-1,
@@ -104,100 +97,34 @@ margin: 0 ;
     right: 0;
     background: rgba(0,0,0,.8);
     color: #fff;
-    border-radius: 15px;
     z-index: 11;
     overflow: hidden;
+    -webkit-transform-origin: top left;
+    transform-origin: top left; 
     -webkit-transform: scale(0);
     transform: scale(0);
     transition: all .4s ease-in-out;
     opacity: 1;
-    padding: 20px 20px;
-    font-family: 'Poppins', sans-serif;
+    padding: 20px 40px;    
 }
-.nft-details-content-1{
-    -webkit-transform-origin: top left;
-    transform-origin: top left; 
-}
-.nft-details-content-2{
-    -webkit-transform-origin: center top;;
-    transform-origin: center top;;
-}
-.nft-details-content-3{
-    -webkit-transform-origin: top right;
-    transform-origin: top right;
-}
-
-.nft-details-content-1 > h2{
-    text-align: center;
-    font-size: 35px;
-    font-weight: 700;
+.nft-details-content-1 > h2,
+.nft-details-content-2 > h2,
+.nft-details-content-3 > h2{
     font-family: 'Teko', sans-serif;
-    margin-top: 20px;
-}
-.nft-details-content-1 > p{
-    text-align: center;
-    font-size: 20px;
+    font-size: 40px;
     font-weight: 700;
-    margin-bottom: 40px;
-    font-family: 'Teko', sans-serif;    
-}
-.nft-details-content-1 .nft-details-text{
-    display: flex;
-    margin-bottom: 20px;
-}
-.nft-details-content-1 .nft-details-text > h3{
-    font-size: 17px;
-    font-weight: 600;
-    width:35%;
     text-align: center;
 }
-.nft-details-content-1 .nft-details-text > p{
-    font-size: 17px;
-    font-weight: 400;
-    color: #ccc;
-    width: 65%;
-    text-align: left;
-    padding-left: 20px;    
-}
-
-.nft-details-content-2 > h2{
-    font-size: 70px;
-    font-family: 'Teko', sans-serif;
-    text-align: center;
-}
-.nft-details-content-2 > p{
-    font-size: 20px;
-    font-weight: 600;
-    text-align: center;
-    margin-top: -10px;;
-}
-.nft-details-content-2 .nft-details-text > p{
-    color: #faf5fa;
-    opacity: 0.64;
-    font-size: 16px;
-    font-weight: 400;
-    margin: 30px 10px 50px 10px;
-    text-align: center;
-}
-
-.nft-details-content-2 .nft-details-text > div{
-    color: #969da3;
-    font-size: 18px;
-    font-weight: 500;
-    text-align: center;
-}
-.nft-details-content-2 .nft-details-text > div > span{
-    color: #fff;
-    font-size: 18px;
-    font-weight: 400;
-}
-
+.nft-details-content-1 > p,
+.nft-details-content-2 > p,
 .nft-details-content-3 > p{
-    font-size: 24px;
-    color: #969da3;
-    font-weight: 500;
-    text-align: center;
-    margin-top: 10px;;
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #ccc;
+    text-align: justify;
+    margin-bottom: 40px;     
 }
 
 </style>
@@ -205,47 +132,31 @@ margin: 0 ;
         <div class="nft-details-box">
                 <nav class="nft-menu">
                     <ul>
-                        <li class="nft-menu-item-1"> FOUNDER</li>
-                        <li class="nft-menu-item-2"> D 1,211</li>
-                        <li class="nft-menu-item-3"> 2 </li>
+                        <li class="nft-menu-item-1"> <i class="fas fa-book"></i></li>
+                        <li class="nft-menu-item-2"> <i class="fas fa-book"></i></li>
+                        <li class="nft-menu-item-3"> <i class="fas fa-book"></i></li>
                     </ul>
                 </nav>
 
                 <div class="nft-details-content-1">
                     <div class="menu-close-icon"> <i class="fas fa-times-circle"></i></div>
-                    <h2>FOUNDER</h2>
-                    <p>5651</p>
-
-                    <div class="nft-details-text">
-                        <h3>Title:</h3>
-                        <p>Accidental Collaboration</p>
-                    </div>
-                    <div class="nft-details-text">
-                        <h3>Artist:</h3>
-                        <p>various</p>
-                    </div>
-                    <div class="nft-details-text">
-                        <h3>Layer artists:</h3>
-                        <p>common<br> Dirty Robot <br>  Mihaly Szemeti <br> Zsolt Kosa</p>
-                    </div>
-                </div> 
-            
-                <div class="nft-details-content-2">
-                    <div class="menu-close-icon"><img src="close_button.svg" alt=""></div>
-                    <h2>D</h2>
-                    <p>Dust</p>
-
-                    <div class="nft-details-text">
-                        <p>Dust is Ether nft’s utility token that will be used across the entire Ether nfts ecosystem.</p>
-                        <div> Amount: <span>1,211</span> </div>
-                    </div>
-                </div> 
+                    <h2>Information</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
                 
+                <div class="nft-details-content-2">
+                    <div class="menu-close-icon"> <i class="fas fa-times-circle"></i></div>
+                    <h2>Information</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
+
                 <div class="nft-details-content-3">
-                    <div class="menu-close-icon"><img src="close_button.svg" alt=""></div> 
-                    <p>5% Discount</p>
-                    <p>Limited Trait Slot</p>
-                </div>            
+                    <div class="menu-close-icon"> <i class="fas fa-times-circle"></i></div>
+                    <h2>Information</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
+            
+
         </div>
     </div>
     
