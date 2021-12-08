@@ -154,17 +154,46 @@ margin: 0 ;
     padding-right: 5px;
     padding-bottom: 10px;
 }
-.nft-details-content-3 > p{
+.nft-details-content-3 .nft-details-text-box-contant{
+    overflow-y: auto;
+    max-height: 410px;
+    margin-top: 5px; 
+    padding-right: 5px;
+    padding-bottom: 10px;
+}
+.nft-details-content-3 .nft-details-text-box-contant .nft-details-text{
+    display: flex;
+    flex-wrap: wrap;
+}
+.nft-details-content-3 .nft-details-text-box-contant .nft-details-text > h3{
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.6;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 50%;
+    text-align: left;
+}
+.nft-details-content-3 .nft-details-text-box-contant .nft-details-text > h4{
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.6;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 50%;
+    text-align: right;
+    padding-right: 10px;
+}
+.nft-details-content-3 .nft-details-text-box-contant .nft-details-text > p{
     font-family: 'Poppins', sans-serif;
     font-size: 17px;
     font-weight: 400;
     line-height: 1.6;
-    color: #ccc;
-    text-align: justify; 
-    overflow-y: auto;
-    height: 80%;
-    margin-top: 5px; 
-    padding-right: 5px; 
+    color: #ccc; 
 }
 #nft-details-text::-webkit-scrollbar{
 	width: 12px;
@@ -218,7 +247,24 @@ margin: 0 ;
                 <div class="nft-details-content-3">
                     <div class="menu-close-icon"> <i class="fas fa-times-circle"></i></div>
                     <h2>Tiki Carvings</h2>
-                    <p id="nft-details-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                   <div id="nft-details-text" class="nft-details-text-box-contant">
+
+                            <div class="nft-details-text">
+                                <h3>Name:</h3> 
+                                <h4>Date:12/06/21</h4>
+                                <p>Story: If you are patient and determined to change the world for the better, this tiki will reveal the secret </p>
+                            </div>
+                            <div class="nft-details-text">
+                                <h3>Name:</h3> 
+                                <h4>Date:12/06/21</h4>
+                                <p>Story: If you are patient and determined to change the world for the better, this tiki will reveal the secret </p>
+                            </div>
+                            <div class="nft-details-text">
+                                <h3>Name:</h3> 
+                                <h4>Date:12/06/21</h4>
+                                <p>Story: If you are patient and determined to change the world for the better, this tiki will reveal the secret </p>
+                            </div>
+                   </div>
                 </div>
             
 
