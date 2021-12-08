@@ -86,11 +86,11 @@ margin: 0 ;
     transform: scale(1);
     opacity: 1;
  }
- .overlay-menu-active-1 .nft-menu ul li,
+ /* .overlay-menu-active-1 .nft-menu ul li,
  .overlay-menu-active-2 .nft-menu ul li,
  .overlay-menu-active-3 .nft-menu ul li{
     opacity: 0;
- }
+ } */
 .nft-details-content-1,
 .nft-details-content-2,
 .nft-details-content-3{
@@ -119,9 +119,44 @@ margin: 0 ;
     font-weight: 700;
     text-align: center;
     margin-top: -40px;
+    margin-bottom: 10px;
 }
-.nft-details-content-1 > p,
-.nft-details-content-2 > p,
+
+.nft-details-content-1 .nft-details-text-box{
+    display: flex;
+    margin-bottom: 20px;
+}
+.nft-details-content-1 .nft-details-text-box > h3{
+    font-size: 17px;
+    font-weight: 600;
+    width:35%;
+    text-align: center;
+}
+.nft-details-content-1 .nft-details-text-box > p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #ccc;
+    width: 65%;
+    text-align: left;
+    padding-left: 20px;    
+}
+
+.nft-details-content-2 > p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #ccc;
+    text-align: justify; 
+    overflow-y: auto;
+    max-height: 410px;
+    margin-top: 5px; 
+    padding-right: 5px;
+    padding-bottom: 20px;
+}
+
 .nft-details-content-3 > p{
     font-family: 'Poppins', sans-serif;
     font-size: 17px;
@@ -134,7 +169,6 @@ margin: 0 ;
     margin-top: 5px; 
     padding-right: 5px; 
 }
-
 
 #nft-details-text::-webkit-scrollbar{
 	width: 12px;
@@ -159,17 +193,30 @@ margin: 0 ;
                 <div class="nft-details-content-1">
                     <div class="menu-close-icon"> <i class="fas fa-times-circle"></i></div>
                     <h2>Tiki Information</h2>
-                    <p id="nft-details-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently </p>
-                </div>
+
+                            <div class="nft-details-text-box">
+                                <h3>Title:</h3>
+                                <p>Accidental Collaboration</p>
+                            </div>
+                            <div class="nft-details-text-box">
+                                <h3>Artist:</h3>
+                                <p>various</p>
+                            </div>
+                            <div class="nft-details-text-box">
+                                <h3>Layer artists:</h3>
+                                <p>common<br> Dirty Robot <br>  Mihaly Szemeti <br> Zsolt Kosa</p>
+                            </div>
+                    </div>
                 
                 <div class="nft-details-content-2">
                     <div class="menu-close-icon"> <i class="fas fa-times-circle"></i></div>
-                    <h2>About Tiki</h2>
-                    <p id="nft-details-text">SAn unearthly green haze covered the sky as the TGs gathered around the rim of the Volcano. The Cosmic Luau had begun and now it was time for the TGs to sacrifice themselves into the lava below to transform their matter and give birth to new creations. The sky split open and a beam of light shot down into the Volcano. Each TG let out a primal scream and danced into the blinding pillar of light. With each TG the pillar grew brighter to the point it rivaled the sun. After the last TG danced his way through the beam, the light vanished and the Volcano erupted sending forth this tiki 
-                        <br><br>
-                        A caveman on a hunt to bring home food during a harsh winter discovered this tiki fused to the skull of a T-Rex. He smashed the skull and brought it back to his cave where the tiki whispered to him the idea for a bow and arrow design that would ensure his tribe never went hungry again. If you put your ear up to the tikis mouth it is said that an utterance can be heard. Those with immense focus are thought to be able to make sense of the sounds. They say the utterance is the secret to unlocking your wildest dreams. It is rumored that this tiki was held captive by R. Kelly in the closet of his master bedroom. R. Kelly tried to harness the power of the tiki but failed and was driven mad, leading to financial ruin, legal troubles and public scorn. 
-                        <br><br>
-                        If you are patient and determined to change the world for the better, this tiki will reveal the secret of how to ride your crypto portfolio to the moons of Saturn. You will have access to an endless supply of wealth and happiness. What you choose to do with it is up to you. Beware, those who choose to ignore the will of the tiki or choose to do harm will suffer ill fates. Your bowels will liquify and you will be stricken with diarrhea until all your organs have been flushed from your body leaving only a husk of who you once were.</p>
+                            <h2>About Tiki</h2> 
+                            <p id="nft-details-text">SAn unearthly green haze covered the sky as the TGs gathered around the rim of the Volcano. The Cosmic Luau had begun and now it was time for the TGs to sacrifice themselves into the lava below to transform their matter and give birth to new creations. The sky split open and a beam of light shot down into the Volcano. Each TG let out a primal scream and danced into the blinding pillar of light. With each TG the pillar grew brighter to the point it rivaled the sun. After the last TG danced his way through the beam, the light vanished and the Volcano erupted sending forth this tiki 
+                                <br><br>
+                                A caveman on a hunt to bring home food during a harsh winter discovered this tiki fused to the skull of a T-Rex. He smashed the skull and brought it back to his cave where the tiki whispered to him the idea for a bow and arrow design that would ensure his tribe never went hungry again. If you put your ear up to the tikis mouth it is said that an utterance can be heard. Those with immense focus are thought to be able to make sense of the sounds. They say the utterance is the secret to unlocking your wildest dreams. It is rumored that this tiki was held captive by R. Kelly in the closet of his master bedroom. R. Kelly tried to harness the power of the tiki but failed and was driven mad, leading to financial ruin, legal troubles and public scorn. 
+                                <br><br>
+                                If you are patient and determined to change the world for the better, this tiki will reveal the secret of how to ride your crypto portfolio to the moons of Saturn. You will have access to an endless supply of wealth and happiness. What you choose to do with it is up to you. Beware, those who choose to ignore the will of the tiki or choose to do harm will suffer ill fates. Your bowels will liquify and you will be stricken with diarrhea until all your organs have been flushed from your body leaving only a husk of who you once were.</p>       
+                         
                 </div>
 
                 <div class="nft-details-content-3">
